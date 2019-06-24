@@ -20,7 +20,7 @@ public class Topic01_TestEviroment {
 		driver.manage().window().maximize();
 		driver.get("http://demo.guru99.com/v4/");
 	}
-
+//11123124124124124
 	@Test
 	public void TC_01_ValidateCurrentUrl() {
 		// Login Page Url matching
@@ -43,6 +43,10 @@ public class Topic01_TestEviroment {
 	@AfterClass
 	public void afterClass() {
 		driver.quit();
+	}
+
+	public static void main(String[] args) {
+		daominhdam@gmail.com
 	}
 
 }
