@@ -37,10 +37,9 @@ public class Topic01_TestEviroment {
 
 	@Test
 	public void TC_03_LoginFormDisplayed() {
-		// Login form displayed
+		// Login form displayed.
 		Assert.assertTrue(driver.findElement(By.xpath("//form[@name='frmLogin']")).isDisplayed());
 	}
-
 	@AfterClass
 	public void afterClass() {
 		driver.quit();
