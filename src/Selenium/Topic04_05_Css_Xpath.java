@@ -11,7 +11,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-public class Topic02_Css_Xpath {
+public class Topic04_05_Css_Xpath {
 	WebDriver driver;
 
 	protected String getSaltString() {
@@ -22,8 +22,10 @@ public class Topic02_Css_Xpath {
 			int index = (int) (rnd.nextFloat() * SALTCHARS.length());
 			salt.append(SALTCHARS.charAt(index));
 		}
-		String saltStr = salt.toString();
+		String saltStr = salt.toString();	
 		return saltStr;
+
+
 
 	}
 
@@ -82,7 +84,7 @@ public class Topic02_Css_Xpath {
 	}
 
 	@Test
-	public void TC_05_CreateAccount() {
+	public void TC_05_CreateAccount() throws InterruptedException {
 		driver.get("http://live.guru99.com");
 		driver.findElement(By.xpath("//div[@class='footer']//a[@title='My Account']")).click();
 		driver.findElement(By.xpath("//span[text()='Create an Account']")).click();
@@ -99,13 +101,16 @@ public class Topic02_Css_Xpath {
 		driver.findElement(By.xpath("//a[@title='Log Out']")).click();
 		String logoutSuccesMsg = driver.findElement(By.xpath("//div[@class='page-title']")).getText();
 		Assert.assertEquals(logoutSuccesMsg, "YOU ARE NOW LOGGED OUT");
-		driver.manage().timeouts().implicitlyWait(15,TimeUnit.SECONDS);
-		String URL = driver.getCurrentUrl();
-		Assert.assertEquals(URL, "http://live.guru99.com/");	
+		//Navigate Về HomePage
+		//Chỉ Cần Check 1 element ở HomePage xuất hiện
+		//Verify HomePage logo image displayed
+		Assert.assertTrue(driver.findElement(By.xpath("//div[@class='page-title']//img[contains(@src,'logo.png')]")).isDisplayed());
+		Assert.assertEquals(driver.getTitle(), "Home page");
 	}
-
-	@AfterClass
+	
+	@AfterClass 	
 	public void afterClass() {
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.quit();
 	}
 

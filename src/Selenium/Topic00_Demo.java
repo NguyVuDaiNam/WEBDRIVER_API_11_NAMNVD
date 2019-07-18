@@ -5,11 +5,12 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-public class Topic00_TestClassTemplate {
+public class Topic00_Demo {
 	WebDriver driver;
 
 	@BeforeClass
@@ -20,22 +21,20 @@ public class Topic00_TestClassTemplate {
 	}
 
 	@Test
-	public void TC_01_() throws InterruptedException {
-		driver.get("http://multiple-select.wenzhixin.net.cn/examples/#basic.html");
-	    Thread.sleep(5000);
-		driver.findElement(By.xpath("//button[@class='ms-choice']")).click();
-		driver.findElement(By.xpath("//input[@value='2']")).click();
+	public void TC_01_() {
+		driver.get("");
 
 	}
 
 	@Test
 	public void TC_02_() {
 		driver.get("");
-	}
 
+	}
+	
 	@AfterClass
 	public void afterClass() {
 		driver.quit();
 	}
-
+	
 }
