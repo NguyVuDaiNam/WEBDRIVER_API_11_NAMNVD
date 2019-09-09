@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="Selenium Webdriver API" parallel="false">
+  <test name="Run test on CHROME browser">
+  
+  	<groups>
+  		<run>
+  			 <include name = "Customer" />
+  		</run>
+  	</groups>
+  	
+    <classes>
+      <class name="TestNG.TestNG_01_Annotations"/>
+      <class name="TestNG.TestNG_02_Group_Priority"/>
+    </classes> -->
+ 
+  </test> 
+
+</suite> 

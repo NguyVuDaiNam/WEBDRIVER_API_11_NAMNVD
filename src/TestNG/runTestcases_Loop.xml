@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="Selenium Webdriver API" parallel="false">
+
+ <parameter name = "username" value = "auto_test_05@gmail.com"/>
+ <parameter name = "password" value = "123123"/>    
+ 
+  <test name="Run test on CHROME browser">
+  	<parameter name = "browser" value = "chrome"/>
+  	<classes> 
+  		<class name = "TestNG.TestNG_06_Loop"/>
+  	</classes>   
+  </test> 
+
+  <test name="Run test on FireFox browser">
+  	<parameter name = "browser" value = "firefox"/>
+  	<classes> 
+  		<class name = "TestNG.TestNG_06_Loop"/>
+  	</classes>   
+  </test> 
+  
+  <test name="Run test on CHROME HEADLESS browser">
+  	<parameter name = "browser" value = "headless"/>
+  	<classes> 
+  		<class name = "TestNG.TestNG_06_Loop"/>
+  	</classes>   
+  </test> 
+
+</suite> 
