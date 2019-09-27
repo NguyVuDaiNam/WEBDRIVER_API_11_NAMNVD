@@ -24,7 +24,7 @@ public class Topic09_HandleButtonRadioCheckboxAlert {
 		driver.manage().window().maximize();
 	}
 
-//111111111
+//11111
 	@Test
 	public void TC_01_HandleButton() {
 		// Step 01 - Truy cập vào trang: http://live.guru99.com/
